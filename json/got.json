@@ -147,6 +147,7 @@
   },
   {
     "name": "Viserys Targaryen",
+    "dead": true,
     "portrait": "assets/viserys.png",
     "picture": "assets/pictures/viserys_targaryen.jpg",
     "house": "targaryen",
@@ -199,7 +200,7 @@
     "name": "Hodor",
     "portrait": "assets/hodor.png",
     "picture": "assets/pictures/hodor.jpg",
-    "bio":  "Hodor, hodor hodor hodor hodor. Hodor hodor hodor, hodor hodor hodor. Hodor, hodor hodor hodor hodor hodor. Hodor hodor, hodor hodor hodor hodor, hodor hodor hodor. "
+    "bio":  ""
   },
   {
     "name": "Maester Luwin",

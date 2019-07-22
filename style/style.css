@@ -15,7 +15,7 @@ body {
     height: 800px;
     justify-content: space-evenly;
     text-align: center;
-    width: 80%;
+    width: 65%;
   }
 
 .item {
@@ -35,14 +35,18 @@ body {
 .nav--search {
   background-color: #888888;
   height: 100%;
+  display: flex;
   position: fixed;
-  overflow-x: hidden;
-  z-index: 1;
+  /* overflow-x: hidden; */
+  /* z-index: 1; */
   top: 0;
   right: 0;
-  float: right;
   width: 20%;
   }
+
+.moreData{
+  margin: 7px;
+}
 
 .search--input {
   bottom: 0;

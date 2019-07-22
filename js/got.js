@@ -8,6 +8,9 @@ const GameOfThronesData = {
   },
   setData(gotCharacters) {
     this.characters = JSON.parse(gotCharacters);
+    for (let i = 0; i < this.characters.length; i += 1) {
+      this.characters[i].id = i + 1;
+    }
     this.showAll();
   },
   showAll() {
@@ -33,15 +36,22 @@ const GameOfThronesData = {
   },
   createFig(item) {
     return `<figure class="item">
-  <img src="${item.portrait}" alt="${item.name}" onclick="GameOfThronesData.moreData(${item.name}, ${item.picture}, ${item.bio})">
+  <img src="${item.portrait}" alt="${item.name}" onclick="GameOfThronesData.moreData(${item.id})">
   <figcaption>${item.name}</figcaption>
   </figure>`;
   },
-  moreData(name, picture, bio) {
-    document.querySelector('.nav--search').innerHTML = `<div class="moreData">
-    <img src="${picture}" alt="${name}">
-    Név: "${name}"
-    Történet: "${bio}"</div>`;
+  moreData(id) {
+    // console.log(arguments);
+    for (let i = 0; i < this.characters.length; i += 1) {
+      if (this.characters[i].id === id) {
+        document.querySelector('.nav--search').innerHTML = `<div class="moreData">
+    <img src="${this.characters[i].picture}" alt="${this.characters[i].name}" class="moreData--img">
+    <br>
+    Name: "${this.characters[i].name}"
+    <br>
+    Bio: "${this.characters[i].bio}"</div>`;
+      }
+    }
   },
 };
 GameOfThronesData.init();
