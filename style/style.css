@@ -15,6 +15,7 @@ body {
     height: 800px;
     justify-content: space-evenly;
     text-align: center;
+    width: 80%;
   }
 
 .item {
@@ -27,17 +28,33 @@ body {
     width: 4%;
 }
 
-.nav--search{
-  background-color: #B8B8B8;
+.item:hover {
+  text-shadow: 2px 2px 4px #f00; 
+}
+
+.nav--search {
+  background-color: #888888;
   height: 100%;
+  position: fixed;
+  overflow-x: hidden;
+  z-index: 1;
+  top: 0;
+  right: 0;
   float: right;
+  width: 20%;
   }
 
+.search--input {
+  bottom: 0;
+  position: fixed;
+}
+
+
 @media all and (min-width: 600px) {
-    .aside-search { flex: 1 0 0; }
+    .nav--search { flex: 1 0 0; }
   }
 
 @media all and (min-width: 800px) {
     .flex-container { flex: 3 0px; }
-    .aside-search{ order: 1; }
+    .nav--search { order: 1; }
 }
