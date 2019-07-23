@@ -1,64 +1,68 @@
 @font-face {
-    font-family: myFirstFont;
-    src: url(/fonts/Game\ of\ Thrones.ttf);
+  font-family: myFirstFont;
+  src: url(/fonts/Game\ of\ Thrones.ttf);
+}
+
+@font-face {
+  font-family: mySecondFont;
+  src: url(/fonts/Canterbury.ttf);
 }
 
 body {
-    background-image: url(/assets/site/mapblue.jpg);
-    background-size: cover;
-    font-family: myFirstFont;
+  background-image: url(/assets/site/mapblue.jpg);
+  background-size: cover;
+  font-family: myFirstFont;
 }
 
 .flex-container {
-    display: flex;
-    flex-flow: column wrap;
-    height: 800px;
-    justify-content: space-evenly;
-    text-align: center;
-    width: 65%;
-  }
+  display: flex;
+  flex-flow: column wrap;
+  height: 900px;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 10px;
+  width: 80%;
+}
 
 .item {
-    cursor: pointer;
-    font-size: 10px;
-    height: 80px;
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
-    width: 4%;
+  cursor: pointer;
+  font-size: 10px;
+  height: 10%;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  width: 4%;
 }
 
 .item:hover {
   text-shadow: 2px 2px 4px #f00; 
 }
 
-.nav--search {
-  background-color: #888888;
+.navSearch {
   height: 100%;
-  display: flex;
+  width: 15%;
   position: fixed;
-  /* overflow-x: hidden; */
-  /* z-index: 1; */
+  opacity: .9;
+  z-index: 1;
   top: 0;
   right: 0;
-  width: 20%;
-  }
-
-.moreData{
-  margin: 7px;
+  background-color: #999;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-.search--input {
-  bottom: 0;
-  position: fixed;
+.moreData--img {
+  border-radius: 15px;
+	height: 50%;
+	width: 100%;
 }
 
-
-@media all and (min-width: 600px) {
-    .nav--search { flex: 1 0 0; }
-  }
-
-@media all and (min-width: 800px) {
-    .flex-container { flex: 3 0px; }
-    .nav--search { order: 1; }
+.moreData {
+  margin: 0px;
+  font-family: mySecondFont;
 }
+
+@media screen and (max-width: 600px) {
+  .flex-container { height: 1600px;}
+ }

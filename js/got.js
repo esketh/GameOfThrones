@@ -44,7 +44,7 @@ const GameOfThronesData = {
     // console.log(arguments);
     for (let i = 0; i < this.characters.length; i += 1) {
       if (this.characters[i].id === id) {
-        document.querySelector('.nav--search').innerHTML = `<div class="moreData">
+        document.querySelector('.char--data').innerHTML = `<div class="moreData">
     <img src="${this.characters[i].picture}" alt="${this.characters[i].name}" class="moreData--img">
     <br>
     Name: "${this.characters[i].name}"
@@ -52,6 +52,17 @@ const GameOfThronesData = {
     Bio: "${this.characters[i].bio}"</div>`;
       }
     }
+  },
+  charSearch() {
+    let searchedChar = document.querySelector('.searchChar').value;
+    for (let i = 0; i < this.characters.length; i += 1) {
+      if (this.characters[i].name.toLowerCase() === searchedChar.toLowerCase()) {
+        document.querySelector('.searchChar').value = '';
+        return this.moreData(this.characters[i].id);
+      }
+      // document.querySelector('.searchChar').value = '';
+      // return window.alert('Please use a valid character name!');
+    } 
   },
 };
 GameOfThronesData.init();
