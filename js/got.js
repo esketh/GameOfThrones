@@ -44,7 +44,7 @@ const GameOfThronesData = {
     // console.log(arguments);
     for (let i = 0; i < this.characters.length; i += 1) {
       if (this.characters[i].id === id) {
-        document.querySelector('.nav--search').innerHTML = `<div class="moreData">
+        document.querySelector('.navSearch').innerHTML = `<div class="moreData">
     <img src="${this.characters[i].picture}" alt="${this.characters[i].name}" class="moreData--img">
     <br>
     Name: "${this.characters[i].name}"
