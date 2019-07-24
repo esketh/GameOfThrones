@@ -58,11 +58,15 @@ const GameOfThronesData = {
     for (let i = 0; i < this.characters.length; i += 1) {
       if (this.characters[i].name.toLowerCase() === searchedChar.toLowerCase()) {
         document.querySelector('.searchChar').value = '';
-        return this.moreData(this.characters[i].id);
+        searchedChar = this.characters[i].id;
+        break;
       }
-      // document.querySelector('.searchChar').value = '';
-      // return window.alert('Please use a valid character name!');
-    } 
+    }
+    if (searchedChar == null) {
+      document.querySelector('.searchChar').value = '';
+      window.alert('Please use a valid character name!');
+    }
+    this.moreData(searchedChar);
   },
 };
 GameOfThronesData.init();
